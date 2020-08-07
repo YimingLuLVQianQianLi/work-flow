@@ -1,0 +1,41 @@
+{
+  "name": "workflow",
+  "version": "0.0.2",
+  "description": "工作流程",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cm": "git add . && git cz && git push",
+    "cm:cs": "git cz && git push",
+    "publish": "node ./scripts/publish.js",
+    "changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@szgitlab.kedacom.com:kbase-demo/work-flow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "commitizen": "^4.1.2",
+    "commitlint-config-cz": "^0.13.1",
+    "conventional-changelog-cli": "^2.0.34",
+    "cz-conventional-changelog": "^3.2.0",
+    "cz-customizable": "^6.3.0",
+    "husky": "^4.2.5",
+    "inquirer": "^7.3.3",
+    "shelljs": "^0.8.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "https://github.com/YimingLuLVQianQianLi/work-flow.git"
+    }
+  }
+}
